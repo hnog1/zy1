@@ -1,54 +1,30 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-		<title>洪茂凯</title>
-</head>
-<style>
-    li {
-        list-style: none;
-    }
-    a {
-        text-decoration: none;
-    }
-    body {
-        background-color: white;
-    }
-	* {
-	    padding: 0;
-	    margin: 0;
-	    box-sizing: border-box;
-	}
-    .hong{
-        text-align: center;
-        margin-top: 100px;
-    }
-    .hong ul li input[type=text],
-    .hong ul li input[type=password],
-    .hong ul li input[type=password2] {
-        font-size: 16px;
-    }
-    .hong ul li input {
-        width: 270px;
-        height: 50px;
-        margin-top: 30px;
-    }
-    .hong ul li input[type=submit] {
-        width: 100px;
-        height: 50px;
-    }
-</style>
-</head>
+<!DOCTYPE html> 
+<html>
+<head> 
+<meta name="viewport" content="initial-scale=1.0, user-scalable=no" /> 
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" /> 
+<title>Hello, World</title> 
+<style type="text/css"> 
+html{height:100%} 
+body{height:100%;margin:0px;padding:0px} 
+#container{height:100%} 
+</style> 
+<script type="text/javascript" src="https://api.map.baidu.com/api?v=3.0&ak=y8wunuznILg2DRMtwCj0LUCUN9cZshmG"></script>
+</head> 
+  
+<body> 
+<div id="container"></div>
+<script type="text/javascript">
 
-<body>
-<form class="hong">
-    <h2>  欢迎注册</h2>
-    <ul>
-        <li>用户名：<input type="text"placeholder="请输入用户名..."></li>
-        <li>密&emsp;码：<input type="password"placeholder="请输入密码..."></li>
-        <li>确认密码：<input type="password2"placeholder="请确认密码..."></li>
-        <li><input type="submit" value="注册"></li>
-    </ul>
-</form>
-</body>
+// 创建地图实例 
+var map = new BMap.Map("container");
+
+// 创建点坐标 （北京天安门坐标）
+var point = new BMap.Point(116.404, 39.915);
+
+// 初始化地图，设置中心点坐标和地图级别 
+map.centerAndZoom(point, 15);
+
+</script> 
+</body> 
 </html>
